@@ -1,0 +1,38 @@
+[project]
+name = "paper-agent-fusion"
+version = "0.1.0"
+description = "Evidence-driven academic paper writing agent with LangGraph"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    # LangChain生态 (最新1.1)
+    "langchain>=1.1.0",
+    "langchain-openai>=1.1.0",
+    "langchain-community>=1.1.0",
+    "langgraph>=1.0.3",
+
+    # 向量存储
+    "faiss-cpu>=1.8.0",
+
+    # PDF处理
+    "pypdf>=5.1.0",
+
+    # 工具
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.4",
+]
